@@ -1,0 +1,29 @@
+2025-11-16 10:23:14 - OTMS - ERROR - Unable to record UI error as task
+Traceback (most recent call last):
+  File "C:\Users\Praveen\Documents\Project OTMS\oil_app_ui.py", line 10670, in <module>
+    _reset_tanker_form()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Praveen\Documents\Project OTMS\oil_app_ui.py", line 10516, in _reset_tanker_form
+    st.session_state[date_key] = today
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Praveen\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\streamlit\runtime\metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "C:\Users\Praveen\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 114, in __setitem__
+    get_session_state()[key] = value
+    ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Praveen\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\streamlit\runtime\state\safe_session_state.py", line 109, in __setitem__
+    self._state[key] = value
+    ~~~~~~~~~~~^^^^^
+  File "C:\Users\Praveen\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\streamlit\runtime\state\session_state.py", line 533, in __setitem__
+    raise StreamlitAPIException(
+    ...<2 lines>...
+    )
+streamlit.errors.StreamlitAPIException: `st.session_state.tanker_date_10` cannot be modified after the widget with key `tanker_date_10` is instantiated.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Praveen\Documents\Project OTMS\oil_app_ui.py", line 133, in _otms_error
+    st.session_state.get("auth_user"),
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'get'
